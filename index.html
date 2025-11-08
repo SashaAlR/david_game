@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>David's Archery Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="header">
+            <h1>🏹 Archery Range 🏹</h1>
+            <div class="score-board">
+                <div class="score">Score: <span id="score">0</span></div>
+                <div class="arrows">Arrows: <span id="arrows">10</span></div>
+            </div>
+        </div>
+        <div id="game-area">
+            <div class="wind-indicator" id="wind-indicator">
+                <div class="wind-label">WIND</div>
+                <div class="wind-arrow" id="wind-arrow">➜</div>
+                <div class="wind-strength" id="wind-strength">None</div>
+            </div>
+            <div class="cloud cloud1">☁️</div>
+            <div class="cloud cloud2">☁️</div>
+            <div class="cloud cloud3">☁️</div>
+            <div class="plane" id="plane">✈</div>
+            <div class="cannon" id="cannon">
+                <div class="cannon-base"></div>
+                <div class="cannon-barrel" id="cannon-barrel"></div>
+            </div>
+            <div class="mario" id="mario">
+                🧔
+                <div class="mario-speech">it's mario time</div>
+            </div>
+            <div class="rocket-launcher" id="rocket-launcher">
+                <div class="launcher-base"></div>
+                <div class="launcher-tube" id="launcher-tube"></div>
+            </div>
+            <div class="sheep" id="sheep">🐑</div>
+            <div class="cow" id="cow">🐄</div>
+            <div class="cow cow2" id="cow2">🐄</div>
+            <div class="target-stand" id="target-stand">
+                <div class="target" id="main-target">
+                    <div class="target-ring ring-white"></div>
+                    <div class="target-ring ring-black"></div>
+                    <div class="target-ring ring-blue"></div>
+                    <div class="target-ring ring-red"></div>
+                    <div class="target-ring ring-yellow"></div>
+                </div>
+            </div>
+            <canvas id="trajectory-canvas"></canvas>
+            <div class="crosshair" id="crosshair">
+                <div class="crosshair-line crosshair-vertical"></div>
+                <div class="crosshair-line crosshair-horizontal"></div>
+                <div class="crosshair-dot"></div>
+            </div>
+            <div class="bow-container" id="bow-container">
+                <div class="bow" id="bow">
+                    <div class="bow-string" id="bow-string"></div>
+                    <div class="arrow-nocked" id="arrow-nocked"></div>
+                </div>
+                <div class="power-meter" id="power-meter">
+                    <div class="power-fill" id="power-fill"></div>
+                </div>
+            </div>
+        </div>
+        <div class="difficulty-selector">
+            <h3>Choose Wind Strength:</h3>
+            <div class="difficulty-buttons">
+                <button class="difficulty-btn active" data-difficulty="easy">No Wind</button>
+                <button class="difficulty-btn" data-difficulty="medium">Light Wind</button>
+                <button class="difficulty-btn" data-difficulty="hard">Strong Wind</button>
+            </div>
+        </div>
+        <div class="controls">
+            <button id="start-btn" class="btn">Start Game</button>
+            <button id="restart-btn" class="btn hidden">Play Again</button>
+        </div>
+        <div class="instructions">
+            <p>Click and hold to pull the bow, release to shoot!</p>
+            <p>Aim higher for farther targets - arrows follow ballistic trajectory!</p>
+        </div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
